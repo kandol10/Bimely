@@ -179,16 +179,27 @@
       justify-content: center;
       box-shadow: 0 5px 20px rgba(255, 87, 34, 0.4);
       animation: pulse 2s ease-in-out infinite;
+      text-align: center;
+      padding: 10px;
     }
     
-    .price-badge .price {
-      font-size: 36px;
+    .price-badge .amount {
+      font-size: 32px;
       font-weight: 900;
+      line-height: 1;
     }
     
-    .price-badge .label {
-      font-size: 16px;
-      font-weight: 500;
+    .price-badge .off-text {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1;
+      margin: 2px 0;
+    }
+    
+    .price-badge .service {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1;
     }
     
     .offers-grid {
@@ -918,12 +929,16 @@
         right: 10px;
       }
       
-      .price-badge .price {
-        font-size: 24px;
+      .price-badge .amount {
+        font-size: 20px;
       }
       
-      .price-badge .label {
+      .price-badge .off-text {
         font-size: 12px;
+      }
+      
+      .price-badge .service {
+        font-size: 14px;
       }
       
       iframe {
@@ -1031,7 +1046,9 @@
       <div class="hero-image">
         <img src="2.png" alt="Vauxsell Binley Woods Service Centre Exterior">
         <div class="price-badge">
-          <div class="price">£10 off MOT</div>
+          <div class="amount">£10</div>
+          <div class="off-text">off</div>
+          <div class="service">MOT</div>
         </div>
       </div>
     </div>
