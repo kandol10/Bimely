@@ -6,7 +6,7 @@
   <meta name="description" content="£10 off MOT (now £35) Test + £20 off Aircon Re-gas + FREE 30 Point Vehicle Health Check at Vauxsell Binley Woods Service Centre - Coventry's Largest Multi-Branch Garage. 4 Local Branches. Limited time offer!">
   
   <title>£10 off MOT (now £35) | £20 off Aircon | Free Check - Vauxsell Binley Woods Multi-Branch Service Centre</title>
-  <link rel="icon" href="logo1.png" type="image/png">
+  <link rel="icon" href="logonew.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   
@@ -649,9 +649,21 @@
     
     .branches-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 30px;
       margin-top: 50px;
+    }
+    
+    @media (min-width: 1400px) {
+      .branches-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .branches-grid {
+        grid-template-columns: 1fr;
+      }
     }
     
     .branch-card {
