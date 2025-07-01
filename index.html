@@ -11,9 +11,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   
   <style>
-
     html, body {
-    overflow-x: hidden;
+      overflow-x: hidden;
     }
 
     * {
@@ -62,13 +61,6 @@
       height: 40px;
       width: auto;
     }
-
-    @media (max-width: 480px) {
-    .trust-logos img {
-    max-width: 80px;
-    }
-    }
-
     
     .phone {
       font-size: 20px;
@@ -87,11 +79,17 @@
       margin-top: 65px;
       border-bottom: 2px solid #FFB74D;
       font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
     }
     
     .update-banner p {
       margin: 0;
-      line-height: 1.4;
+      line-height: 1.6;
+      max-width: 1200px;
+      margin: 0 auto;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     
     /* Hero Section */
@@ -128,32 +126,6 @@
     @keyframes pulse {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.05); }
-    }
-
-    /* Important Update Banner */
-    .update-banner {
-      background: #FFF3E0;
-      color: #E65100;
-      padding: 12px 20px;
-      text-align: center;
-      margin-top: 65px;
-      border-bottom: 2px solid #FFB74D;
-      font-size: 14px;
-      overflow: visible;
-      word-wrap: break-word;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    
-    .update-banner p {
-      margin: 0;
-      line-height: 1.6;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0;
-      word-break: break-word;
-      overflow-wrap: break-word;
-      hyphens: auto;
     }
     
     h1 {
@@ -637,6 +609,11 @@
       margin-top: 30px;
     }
     
+    .trust-logos img {
+      max-width: 120px;
+      height: auto;
+    }
+    
     .stats-section {
       background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
       color: white;
@@ -746,31 +723,59 @@
       color: #999;
     }
     
-    /* Mobile Responsive */
+    /* MOBILE RESPONSIVE FIXES */
     @media (max-width: 768px) {
+      /* Fix header and banner on mobile */
+      .header {
+        position: relative !important;
+        width: 100%;
+      }
+      
+      .update-banner {
+        margin-top: 0 !important;
+        position: relative;
+        padding: 10px 15px;
+        font-size: 13px;
+      }
+      
+      body {
+        padding-top: 0 !important;
+      }
+      
       .header-content {
         flex-direction: column;
         gap: 10px;
+        padding: 10px 15px;
       }
       
       .logo {
-        font-size: 18px;
+        font-size: 16px;
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
+        gap: 10px;
       }
       
       .logo span {
         width: 100%;
-        margin-top: 5px;
+        font-size: 14px;
       }
       
       .logo img {
         height: 30px;
       }
       
+      .phone {
+        font-size: 16px;
+      }
+      
+      .hero {
+        padding: 40px 20px;
+      }
+      
       .hero-container {
         grid-template-columns: 1fr;
+        gap: 30px;
         text-align: center;
       }
       
@@ -779,129 +784,171 @@
       }
       
       h1 {
-        font-size: 36px;
+        font-size: 32px;
       }
       
       .subtitle {
         font-size: 18px;
       }
       
+      .offer-badge {
+        font-size: 14px;
+        padding: 8px 20px;
+      }
+      
+      .offers-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      
+      .offer-card {
+        padding: 15px;
+      }
+      
       .offer-price {
         font-size: 28px;
+      }
+      
+      .cta-section {
+        padding: 20px;
+      }
+      
+      .cta-text {
+        font-size: 20px;
+      }
+      
+      .cta-button {
+        font-size: 18px;
+        padding: 15px 30px;
       }
       
       .benefits {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
       }
       
-      .contact-info {
-        flex-direction: column;
+      .benefit {
+        font-size: 16px;
+      }
+      
+      .why-section, .form-section {
+        padding: 50px 20px;
+      }
+      
+      .section-header h2 {
+        font-size: 28px;
+      }
+      
+      .section-header p {
+        font-size: 16px;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .form-container {
+        padding: 25px;
+      }
+      
+      .form-header h2 {
+        font-size: 24px;
       }
       
       .map-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .map-info {
+        padding: 25px;
       }
       
       .stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
       }
+      
+      .stat-item h3 {
+        font-size: 36px;
+      }
+      
+      .stat-item p {
+        font-size: 16px;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .trust-logos {
+        gap: 20px;
+      }
+      
+      .trust-logos img {
+        max-width: 80px;
+      }
+      
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        right: 20px;
+        bottom: 20px;
+      }
+      
+      .price-badge {
+        width: 80px;
+        height: 80px;
+        top: 10px;
+        right: 10px;
+      }
+      
+      .price-badge .price {
+        font-size: 24px;
+      }
+      
+      .price-badge .label {
+        font-size: 12px;
+      }
+      
+      iframe {
+        height: 300px;
+      }
     }
-/* Header */
-    .header {
-      background: #2196F3;
-      color: white;
-      padding: 15px 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      height: auto;
-    /* CRITICAL MOBILE FIX - MAXIMUM PRIORITY */
-    @media screen and (max-width: 768px) {
-      body > .header,
-      header.header {
-        position: relative !important;
-        top: auto !important;
-        margin-bottom: 0 !important;
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
       }
       
-      body > .update-banner,
-      div.update-banner {
-        margin-top: 0 !important;
-        position: relative !important;
-        top: auto !important;
+      .update-banner {
+        font-size: 12px;
+        padding: 8px 10px;
       }
       
-      body {
-        padding-top: 0 !important;
-        margin-top: 0 !important;
+      .offer-price {
+        font-size: 24px;
+      }
+      
+      .cta-button {
+        font-size: 16px;
+        padding: 12px 25px;
+      }
+      
+      .form-container {
+        padding: 20px 15px;
+      }
+      
+      .code-display {
+        font-size: 28px;
       }
     }
   </style>
 </head>
-<body>
-  <!-- Header -->
-<style>
-  
-    
-    /* Top Banner */
-    .top-banner {
-      background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
-      color: white;
-      padding: 15px 0;
-      text-align: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    
-    .top-banner .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    .banner-text {
-      font-size: 16px;
-      font-weight: 500;
-    }
-    
-    .banner-phone {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 18px;
-      font-weight: 700;
-    }
-    
-    .banner-phone i {
-      font-size: 20px;
-    }
-    
-    /* Hero Section */
-    /* Header */
-   /* Header */
-    .header {
-      background: #2196F3;
-      color: white;
-      padding: 15px 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      height: auto;
-    }
-</style>
-  <!-- Top Banner -->
 <body>
   <!-- Header -->
   <header class="header">
@@ -922,12 +969,10 @@
   <div class="update-banner">
     <p>
       <strong>📍 Important:</strong> Our Rugby Road branch (CV3 2AX) is moving to the Vauxsell Bodmin Road supersite at the end of July 2025.
-      Soon operating as <strong> Vauxsell Binley Woods – Head Branch, one of Coventry’s largest independent workshops. We’ll keep you informed throughout the transition.</strong>.
+      Soon operating as <strong>Vauxsell Binley Woods – Head Branch, one of Coventry's largest independent workshops. We'll keep you informed throughout the transition.</strong>
     </p>
   </div>
 
-  <!-- Hero Section -->
-  
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-container">
