@@ -172,7 +172,6 @@
       padding: 10px 30px;
       border-radius: 30px;
       font-weight: 600;
-      margin-bottom: 20px;
       animation: pulse 2s infinite;
     }
     
@@ -255,7 +254,6 @@
       gap: 10px;
       font-size: 18px;
       font-weight: 700;
-      margin-bottom: 20px;
       box-shadow: 0 5px 20px rgba(21, 101, 192, 0.3);
     }
     
@@ -265,9 +263,12 @@
     
     .offers-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 15px;
       margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
     .offer-card {
@@ -277,6 +278,10 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.1);
       text-align: center;
       transition: transform 0.3s ease;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     
     .offer-card:hover {
@@ -286,6 +291,7 @@
     .offer-card.blue-light-card {
       background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
       border: 2px solid #1565C0;
+      position: relative;
     }
     
     .offer-price {
@@ -733,6 +739,12 @@
       margin-top: 50px;
     }
     
+    @media (min-width: 1200px) {
+      .offers-grid {
+        max-width: 700px;
+      }
+    }
+    
     @media (min-width: 1400px) {
       .branches-grid {
         grid-template-columns: repeat(4, 1fr);
@@ -961,7 +973,15 @@
       /* Fix badges on mobile */
       .hero-content > div:first-child {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+      }
+      
+      .offer-badge, .blue-light-hero-badge {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: auto;
       }
       
       /* Fix header and banner on mobile */
@@ -1045,22 +1065,44 @@
         padding: 8px 20px;
       }
       
-      .blue-light-hero-badge {
-        font-size: 16px;
-        padding: 12px 20px;
-      }
-      
       .offers-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+        max-width: 100%;
       }
       
       .offer-card {
-        padding: 15px;
+        padding: 15px 10px;
+        min-height: 120px;
+      }
+      
+      .offers-grid {
+        gap: 8px;
+      }
+      
+      .offer-card {
+        padding: 12px 8px;
+        min-height: 110px;
       }
       
       .offer-price {
-        font-size: 28px;
+        font-size: 22px;
+      }
+      
+      .offer-title {
+        font-size: 13px;
+      }
+      
+      .offer-save {
+        font-size: 11px;
+      }
+      
+      .offer-title {
+        font-size: 14px;
+      }
+      
+      .offer-save {
+        font-size: 12px;
       }
       
       .cta-section {
@@ -1422,6 +1464,7 @@
           <h3>12 Month Warranty</h3>
           <p>Complete peace of mind with our comprehensive 12 month/12,000 mile warranty on all parts and labour.</p>
         </div>
+      </div>
     </div>
   </section>
   
