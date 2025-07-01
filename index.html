@@ -1127,10 +1127,24 @@
         // Send data to Google Sheets in background
         const formData = new FormData(this);
         const data = Object.fromEntries(formData);
-        data.timestamp = new Date().toISOString();
-        data.source = 'Vauxsell Binley Woods Funnel Page';
-        data.discountCode = 'BWSAVE10';
-        data.offers = '£10 MOT, £20 Aircon Re-gas, Free 30 Point Check';
+        
+        // Map form fields to match Google Sheets expectations
+        const sheetData = {
+          fullName: data.fullName || '',
+          email: data.email || '',
+          phone: data.phone || '',
+          postcode: data.postcode || '',
+          vehicleReg: data.vehicleReg || '',
+          vehicleMake: '', // Not in form, leave empty
+          serviceType: data.serviceRequired || '', // Map serviceRequired to serviceType
+          preferredDate: '', // Not in form, leave empty
+          collectionRequired: data.freeCollection === 'on', // Convert checkbox to boolean
+          timestamp: new Date().toISOString(),
+          source: 'Vauxsell Binley Woods Funnel Page',
+          discountCode: 'BWSAVE10',
+          discountAmount: '£10-£20',
+          websiteUrl: window.location.href
+        };
         
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz0pg9BXknd5EI20M4Ba1h1qTLroDstKebVsLLK-_cVGdmYng0kOjYLjaBEvYa68-imMQ/exec';
         
@@ -1141,7 +1155,7 @@
           headers: {
             'Content-Type': 'text/plain',
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(sheetData)
         }).catch(err => console.log('Background save:', err));
         
         // Track conversion if analytics present
