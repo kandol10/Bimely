@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="£10 off MOT (now £35) Test + £20 off Aircon Re-gas + FREE 30 Point Vehicle Health Check at Vauxsell Binley Woods Service Centre - Coventry's Biggest Garage. Limited time offer!">
+  <meta name="description" content="£10 off MOT (now £35) Test + £20 off Aircon Re-gas + FREE 30 Point Vehicle Health Check at Vauxsell Binley Woods Service Centre - Coventry's Largest Multi-Branch Garage. 4 Local Branches. Limited time offer!">
   
-  <title>£10 off MOT (now £35) | £20 off Aircon | Free Check - Vauxsell Binley Woods Service Centre</title>
+  <title>£10 off MOT (now £35) | £20 off Aircon | Free Check - Vauxsell Binley Woods Multi-Branch Service Centre</title>
   <link rel="icon" href="logo1.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -636,6 +636,126 @@
       height: auto;
     }
     
+    /* Branches Section */
+    .branches-section {
+      background: #f8f8f8;
+      padding: 80px 20px;
+    }
+    
+    .branches-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .branches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .branch-card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .main-branch {
+      border: 2px solid #2196F3;
+    }
+    
+    .main-branch-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #2196F3;
+      color: white;
+      padding: 5px 20px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .branch-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    
+    .branch-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 24px;
+      color: white;
+    }
+    
+    .branch-card h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    
+    .branch-subtitle {
+      color: #666;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    
+    .branch-info {
+      text-align: left;
+    }
+    
+    .branch-info p {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 10px 0;
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .branch-info i {
+      color: #2196F3;
+      font-size: 16px;
+      margin-top: 2px;
+      min-width: 16px;
+    }
+    
+    .branch-info a {
+      color: #2196F3;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .branch-info a:hover {
+      text-decoration: underline;
+    }
+    
+    .branches-cta {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(33, 150, 243, 0.1);
+      border-radius: 15px;
+    }
+    
+    .branches-cta p {
+      font-size: 18px;
+      color: #2196F3;
+      font-weight: 600;
+    }
+    
     .stats-section {
       background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
       color: white;
@@ -944,6 +1064,19 @@
       iframe {
         height: 300px;
       }
+      
+      .branches-section {
+        padding: 50px 20px;
+      }
+      
+      .branches-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .branch-card {
+        padding: 20px;
+      }
     }
     
     @media (max-width: 480px) {
@@ -976,6 +1109,18 @@
       .logo img {
         height: 28px;
       }
+      
+      .branches-cta p {
+        font-size: 14px;
+      }
+      
+      .branch-card h3 {
+        font-size: 18px;
+      }
+      
+      .branch-info p {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
@@ -986,7 +1131,7 @@
       <div class="logo">
         <img src="9.png" alt="Vauxsell Logo">
         <img src="logo1.png" alt="Binley Woods Logo">
-        <img src="10.jpg" alt="Third Logo">
+        <img src="logo3.png" alt="Third Logo">
         <span>Vauxsell Binley Woods Service Centre</span>
       </div>
       <div class="phone">
@@ -999,8 +1144,8 @@
   <!-- Important Update Banner -->
   <div class="update-banner">
     <p>
-      <strong>📍 Important:</strong> Our Rugby Road branch (CV3 2AX) is moving to the Vauxsell Bodmin Road supersite at the end of July 2025.
-      Soon operating as <strong>Vauxsell Binley Woods – Head Branch, one of Coventry's largest independent workshops. We'll keep you informed throughout the transition.</strong>
+      <strong>📍 Important:</strong> Our Rugby Road branch (CV3 2AX) is consolidating with the Vauxsell Bodmin Road supersite at the end of July 2025.
+      Soon operating as <strong>Vauxsell Binley Woods – Head Branch, creating Coventry's largest independent workshop. We'll keep you informed throughout the transition.</strong>
     </p>
   </div>
   
@@ -1014,9 +1159,9 @@
           Vauxsell Binley Woods Service Centre – the new face of Coventry car care
         </p>
         <p style="font-size: 20px; color: #666; font-weight: 600; margin-bottom: 20px;">
-          Two trusted garages now under one roof
+          Two trusted garages now under one roof - 4 branches across Coventry & Rugby
         </p>
-        <p class="subtitle">Coventry's Biggest Garage - 15 Service Ramps</p>
+        <p class="subtitle">Coventry's Largest Multi-Branch Garage - 15 Service Ramps - 4 Branches Locally</p>
         <p style="font-size: 20px; color: #2196F3; font-weight: 700; margin-bottom: 20px;">
           <i class="fas fa-car"></i> Vauxhall Car & Van Repair Specialist
         </p>
@@ -1090,7 +1235,7 @@
     <div class="why-container">
       <div class="section-header">
         <h2>Why Choose Vauxsell Binley Woods?</h2>
-        <p>Two trusted garages now under one roof - creating Coventry's most advanced facility</p>
+        <p>Two trusted garages now under one roof - creating Coventry's most advanced multi-branch facility</p>
       </div>
       
       <div class="features-grid">
@@ -1098,8 +1243,8 @@
           <div class="feature-icon">
             <i class="fas fa-warehouse"></i>
           </div>
-          <h3>15 Service Ramps</h3>
-          <p>Coventry's largest garage facility means no waiting - we can service multiple vehicles simultaneously with our expert team.</p>
+          <h3>4 Local Branches</h3>
+          <p>With 4 strategic locations across Coventry and Rugby, we're always nearby. 15 service ramps at our main branch mean no waiting!</p>
         </div>
         
         <div class="feature-card">
@@ -1115,7 +1260,7 @@
             <i class="fas fa-truck"></i>
           </div>
           <h3>Free Collection & Delivery</h3>
-          <p>We'll collect your car from home or work and deliver it back - completely FREE across all of Coventry and Warwickshire.</p>
+          <p>We'll collect your car from home or work and deliver it back - completely FREE across all of Coventry and Warwickshire from any of our 4 branches.</p>
         </div>
         
         <div class="feature-card">
@@ -1149,6 +1294,10 @@
   <section class="stats-section">
     <div class="stats-grid">
       <div class="stat-item">
+        <h3>4</h3>
+        <p>Local Branches</p>
+      </div>
+      <div class="stat-item">
         <h3>15</h3>
         <p>Service Ramps</p>
       </div>
@@ -1159,10 +1308,6 @@
       <div class="stat-item">
         <h3>5,000+</h3>
         <p>Happy Customers</p>
-      </div>
-      <div class="stat-item">
-        <h3>5★</h3>
-        <p>Google Reviews</p>
       </div>
     </div>
   </section>
@@ -1260,8 +1405,8 @@
   <section class="map-section">
     <div class="map-container">
       <div class="section-header">
-        <h2>Find Us in Coventry</h2>
-        <p>Just 5 minutes from University Hospital Coventry</p>
+        <h2>Find Our Main Branch in Coventry</h2>
+        <p>Just 5 minutes from University Hospital Coventry - See all 4 branches below</p>
       </div>
       
       <div class="map-grid">
@@ -1277,7 +1422,7 @@
         </div>
         
         <div class="map-info">
-          <h3 style="font-size: 28px; color: #333; margin-bottom: 30px;">Visit Coventry's Biggest Garage</h3>
+          <h3 style="font-size: 28px; color: #333; margin-bottom: 30px;">Visit Coventry's Largest Multi-Branch Garage</h3>
           
           <div class="location-item">
             <i class="fas fa-map-marker-alt"></i>
@@ -1330,10 +1475,75 @@
     </div>
   </section>
   
+  <!-- Branches Section -->
+  <section class="branches-section">
+    <div class="branches-container">
+      <div class="section-header">
+        <h2>Our 4 Local Branches</h2>
+        <p>Serving Coventry, Rugby, and surrounding areas with expert car care</p>
+      </div>
+      
+      <div class="branches-grid">
+        <div class="branch-card main-branch">
+          <div class="main-branch-badge">Main Branch</div>
+          <div class="branch-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Binley Woods Service Centre</h3>
+          <p class="branch-subtitle">(Head Office - Coventry)</p>
+          <div class="branch-info">
+            <p><i class="fas fa-location-dot"></i> 5 Bodmin Road, Coventry, CV2 5DB</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:02476542202">024 7654 2202</a></p>
+          </div>
+        </div>
+        
+        <div class="branch-card">
+          <div class="branch-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Binley Woods Service Centre</h3>
+          <p class="branch-subtitle">(Coventry)</p>
+          <div class="branch-info">
+            <p><i class="fas fa-location-dot"></i> 60-62 Rugby Road, Coventry, CV3 2AX</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:02476542202">024 7654 2202</a></p>
+          </div>
+        </div>
+        
+        <div class="branch-card">
+          <div class="branch-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Binley Woods Service Centre</h3>
+          <p class="branch-subtitle">(Rugby)</p>
+          <div class="branch-info">
+            <p><i class="fas fa-location-dot"></i> Unit 2, Prospect Park, Valley Drive, Rugby, CV21 1TF</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:01788877447">017 8887 7447</a></p>
+          </div>
+        </div>
+        
+        <div class="branch-card">
+          <div class="branch-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Binley Woods Gearbox Centre</h3>
+          <p class="branch-subtitle">(Specialist Branch)</p>
+          <div class="branch-info">
+            <p><i class="fas fa-location-dot"></i> Unit 6, White House Farm, Oxford Road, Princethorpe, CV23 9QD</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:02476880910">024 7688 0910</a></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="branches-cta">
+        <p>All branches offer FREE collection & delivery across Coventry and Warwickshire!</p>
+      </div>
+    </div>
+  </section>
+  
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
-      <h3 style="margin-bottom: 20px;">Vauxsell Binley Woods Service Centre</h3>
+      <h3 style="margin-bottom: 20px;">Vauxsell Binley Woods Service Centre - 4 Branches</h3>
       <p style="margin-bottom: 20px; font-size: 18px; color: #4CAF50;">Vauxhall Car & Van Repair Specialist</p>
       <div class="contact-info">
         <div class="contact-item">
@@ -1350,7 +1560,7 @@
         </div>
       </div>
       <p style="margin-top: 20px; opacity: 0.8;">
-        © 2025 Vauxsell Binley Woods Service Centre. Coventry's Biggest Garage.
+        © 2025 Vauxsell Binley Woods Service Centre. Coventry's Largest Multi-Branch Garage.
       </p>
     </div>
   </footer>
