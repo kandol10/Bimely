@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="£10 off MOT (now £35) Test + £20 off Aircon Re-gas + FREE 30 Point Vehicle Health Check at Vauxsell Binley Woods Service Centre - Coventry's Largest Multi-Branch Garage. 4 Local Branches. Limited time offer!">
+  <meta name="description" content="£10 off MOT (now £35) Test + £20 off Aircon Re-gas + FREE 30 Point Vehicle Health Check + Blue Light Card 10% Discount at Vauxsell Binley Woods Service Centre - Coventry's Largest Multi-Branch Garage. 4 Local Branches. Limited time offer!">
   
-  <title>£10 off MOT (now £35) | £20 off Aircon | Free Check - Vauxsell Binley Woods Multi-Branch Service Centre</title>
+  <title>£10 off MOT (now £35) | £20 off Aircon | Blue Light Card 10% Discount - Vauxsell Binley Woods Multi-Branch Service Centre</title>
   <link rel="icon" href="logonew.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -81,13 +81,55 @@
       color: #2196F3;
     }
     
+    /* Blue Light Card Banner */
+    .blue-light-banner {
+      background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      margin-top: 80px;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      animation: slideDown 0.5s ease;
+    }
+    
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+    
+    .blue-light-banner p {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .blue-light-badge {
+      background: white;
+      color: #1565C0;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
     /* Important Update Banner */
     .update-banner {
       background: #FFF3E0;
       color: #E65100;
       padding: 12px 20px;
       text-align: center;
-      margin-top: 80px;
       border-bottom: 2px solid #FFB74D;
       font-size: 14px;
       width: 100%;
@@ -202,6 +244,26 @@
       line-height: 1;
     }
     
+    /* Blue Light Card Hero Badge */
+    .blue-light-hero-badge {
+      background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 20px rgba(21, 101, 192, 0.3);
+      animation: pulse 2s infinite;
+    }
+    
+    .blue-light-hero-badge i {
+      font-size: 20px;
+    }
+    
     .offers-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -222,10 +284,19 @@
       transform: translateY(-5px);
     }
     
+    .offer-card.blue-light-card {
+      background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+      border: 2px solid #1565C0;
+    }
+    
     .offer-price {
       font-size: 32px;
       font-weight: 900;
       color: #4CAF50;
+    }
+    
+    .offer-price.blue-light {
+      color: #1565C0;
     }
     
     .offer-title {
@@ -350,6 +421,11 @@
       box-shadow: 0 15px 40px rgba(0,0,0,0.12);
     }
     
+    .feature-card.blue-light-feature {
+      background: linear-gradient(135deg, #E3F2FD 0%, white 100%);
+      border: 2px solid #1565C0;
+    }
+    
     .feature-icon {
       width: 60px;
       height: 60px;
@@ -361,6 +437,10 @@
       margin-bottom: 20px;
       font-size: 24px;
       color: white;
+    }
+    
+    .feature-icon.blue-light-icon {
+      background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
     }
     
     .feature-card h3 {
@@ -885,8 +965,18 @@
         width: 100%;
       }
       
-      .update-banner {
+      .blue-light-banner {
         margin-top: 0 !important;
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+      
+      .blue-light-badge {
+        font-size: 12px;
+        padding: 3px 8px;
+      }
+      
+      .update-banner {
         position: relative;
         padding: 10px 15px;
         font-size: 13px;
@@ -948,6 +1038,11 @@
       .offer-badge {
         font-size: 14px;
         padding: 8px 20px;
+      }
+      
+      .blue-light-hero-badge {
+        font-size: 16px;
+        padding: 12px 20px;
       }
       
       .offers-grid {
@@ -1153,6 +1248,15 @@
     </div>
   </header>
   
+  <!-- Blue Light Card Banner -->
+  <div class="blue-light-banner">
+    <p>
+      <i class="fas fa-id-card"></i>
+      <span class="blue-light-badge">NEW: BLUE LIGHT CARD HOLDERS</span>
+      <strong>Get 10% OFF ALL Services</strong> - NHS, Emergency Services, Armed Forces & Social Care Workers Welcome!
+    </p>
+  </div>
+  
   <!-- Important Update Banner -->
   <div class="update-banner">
     <p>
@@ -1166,6 +1270,10 @@
     <div class="hero-container">
       <div class="hero-content">
         <div class="offer-badge">⏰ OFFER ENDS SOON</div>
+        <div class="blue-light-hero-badge">
+          <i class="fas fa-shield-alt"></i>
+          BLUE LIGHT CARD: 10% OFF
+        </div>
         <h1>Get Your Car Serviced<br>From Just £89</h1>
         <p style="font-size: 26px; color: #1976D2; font-weight: 700; margin-bottom: 10px;">
           Vauxsell Binley Woods Service Centre – the new face of Coventry car care
@@ -1193,6 +1301,11 @@
             <div class="offer-price">FREE</div>
             <div class="offer-title">30 Point Vehicle Health Check</div>
             <div class="offer-save">Worth £39.99</div>
+          </div>
+          <div class="offer-card blue-light-card">
+            <div class="offer-price blue-light">10%</div>
+            <div class="offer-title">Blue Light Card Discount</div>
+            <div class="offer-save">On ALL Services!</div>
           </div>
         </div>
         
@@ -1239,6 +1352,10 @@
         <i class="fas fa-check-circle"></i>
         <span>Video Authorization</span>
       </div>
+      <div class="benefit">
+        <i class="fas fa-check-circle"></i>
+        <span>Blue Light Card 10% Off</span>
+      </div>
     </div>
   </section>
   
@@ -1251,6 +1368,14 @@
       </div>
       
       <div class="features-grid">
+        <div class="feature-card blue-light-feature">
+          <div class="feature-icon blue-light-icon">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <h3>Blue Light Card Discount</h3>
+          <p>Proud to support our NHS heroes, emergency services, armed forces, and social care workers with 10% off all services. Simply show your Blue Light Card when booking!</p>
+        </div>
+        
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-warehouse"></i>
@@ -1329,7 +1454,7 @@
     <div class="form-container">
       <div class="form-header">
         <h2>Sign Up to Reveal Your Discount Code</h2>
-        <p>Get instant access to all 3 exclusive offers</p>
+        <p>Get instant access to all exclusive offers including Blue Light Card discount</p>
         <div class="signup-notice">
           <i class="fas fa-lock"></i>
           <span>You must complete the form below to unlock your discount code!</span>
@@ -1369,6 +1494,7 @@
             <option value="mot">£10 MOT Test</option>
             <option value="aircon">£20 Aircon Re-gas</option>
             <option value="both">Both MOT & Aircon</option>
+            <option value="bluelight">Blue Light Card Service</option>
             <option value="other">Other Service</option>
           </select>
         </div>
@@ -1376,6 +1502,11 @@
         <div class="checkbox-group">
           <input type="checkbox" id="freeCollection" name="freeCollection">
           <label for="freeCollection">I need FREE collection & delivery</label>
+        </div>
+        
+        <div class="checkbox-group">
+          <input type="checkbox" id="blueLightHolder" name="blueLightHolder">
+          <label for="blueLightHolder">I'm a Blue Light Card holder</label>
         </div>
         
         <button type="submit" class="submit-btn" id="submitBtn">
@@ -1399,6 +1530,7 @@
             ✓ £10 off MOT (now £35) Test<br>
             ✓ £20 off Aircon Re-gas<br>
             ✓ FREE 30 Point Health Check<br>
+            ✓ Blue Light Card: 10% off ALL services<br>
             <strong>Valid for 30 days</strong>
           </p>
         </div>
@@ -1492,7 +1624,7 @@
     <div class="branches-container">
       <div class="section-header">
         <h2>Our 4 Local Branches</h2>
-        <p>Serving Coventry, Rugby, and surrounding areas with expert car care</p>
+        <p>Serving Coventry, Rugby, and surrounding areas with expert car care - All branches accept Blue Light Card</p>
       </div>
       
       <div class="branches-grid">
@@ -1546,8 +1678,8 @@
         </div>
       </div>
       
-      <div class="branches-cta">
-        <p>All branches offer FREE collection & delivery across Coventry and Warwickshire!</p>
+      <div class="branches-cta" style="background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);">
+        <p>🎖️ All branches offer FREE collection & delivery AND accept Blue Light Card for 10% discount!</p>
       </div>
     </div>
   </section>
@@ -1556,7 +1688,7 @@
   <footer class="footer">
     <div class="footer-content">
       <h3 style="margin-bottom: 20px;">Vauxsell Binley Woods Service Centre - 4 Branches</h3>
-      <p style="margin-bottom: 20px; font-size: 18px; color: #4CAF50;">Vauxhall Car & Van Repair Specialist</p>
+      <p style="margin-bottom: 20px; font-size: 18px; color: #4CAF50;">Vauxhall Car & Van Repair Specialist | Blue Light Card Partner</p>
       <div class="contact-info">
         <div class="contact-item">
           <i class="fas fa-map-marker-alt"></i>
@@ -1631,10 +1763,11 @@
           serviceType: data.serviceRequired || '', // Map serviceRequired to serviceType
           preferredDate: '', // Not in form, leave empty
           collectionRequired: data.freeCollection === 'on', // Convert checkbox to boolean
+          blueLightHolder: data.blueLightHolder === 'on', // Add Blue Light Card status
           timestamp: new Date().toISOString(),
           source: 'Vauxsell Binley Woods Funnel Page',
           discountCode: 'BWSAVE10',
-          discountAmount: '£10-£20',
+          discountAmount: '£10-£20 + Blue Light 10%',
           websiteUrl: window.location.href
         };
         
