@@ -257,7 +257,6 @@
       font-weight: 700;
       margin-bottom: 20px;
       box-shadow: 0 5px 20px rgba(21, 101, 192, 0.3);
-      animation: pulse 2s infinite;
     }
     
     .blue-light-hero-badge i {
@@ -959,6 +958,12 @@
     
     /* MOBILE RESPONSIVE FIXES */
     @media (max-width: 768px) {
+      /* Fix badges on mobile */
+      .hero-content > div:first-child {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
       /* Fix header and banner on mobile */
       .header {
         position: relative !important;
@@ -1269,10 +1274,12 @@
   <section class="hero">
     <div class="hero-container">
       <div class="hero-content">
-        <div class="offer-badge">⏰ OFFER ENDS SOON</div>
-        <div class="blue-light-hero-badge">
-          <i class="fas fa-shield-alt"></i>
-          BLUE LIGHT CARD: 10% OFF
+        <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center; margin-bottom: 20px;">
+          <div class="offer-badge" style="margin-bottom: 0;">⏰ OFFER ENDS SOON</div>
+          <div class="blue-light-hero-badge" style="margin-bottom: 0;">
+            <i class="fas fa-shield-alt"></i>
+            BLUE LIGHT CARD: 10% OFF
+          </div>
         </div>
         <h1>Get Your Car Serviced<br>From Just £89</h1>
         <p style="font-size: 26px; color: #1976D2; font-weight: 700; margin-bottom: 10px;">
@@ -1415,8 +1422,6 @@
           <h3>12 Month Warranty</h3>
           <p>Complete peace of mind with our comprehensive 12 month/12,000 mile warranty on all parts and labour.</p>
         </div>
-        
-      
     </div>
   </section>
   
