@@ -10,19 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   
-
-
   <style>
     html, body {
       overflow-x: hidden;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     
     body {
       font-family: 'Inter', Arial, sans-serif;
@@ -33,8 +29,8 @@
     
     /* Header */
     .header {
-      background: #2196F3;
-      color: white;
+      background: #fff;
+      color: #333;
       padding: 15px 0;
       position: fixed;
       top: 0;
@@ -58,11 +54,18 @@
       display: flex;
       align-items: center;
       gap: 15px;
+      color: #333;
     }
-
+    
     .logo img {
-      height: 40px;
+      height: 50px;
       width: auto;
+    }
+    
+    .logo span {
+      color: #2196F3;
+      font-size: 18px;
+      font-weight: 600;
     }
     
     .phone {
@@ -71,6 +74,11 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      color: #2196F3;
+    }
+    
+    .phone i {
+      color: #2196F3;
     }
     
     /* Important Update Banner */
@@ -79,7 +87,7 @@
       color: #E65100;
       padding: 12px 20px;
       text-align: center;
-      margin-top: 65px;
+      margin-top: 80px;
       border-bottom: 2px solid #FFB74D;
       font-size: 14px;
       width: 100%;
@@ -765,7 +773,7 @@
       }
       
       .logo img {
-        height: 30px;
+        height: 40px;
       }
       
       .phone {
@@ -950,34 +958,14 @@
         font-size: 28px;
       }
     }
-
-    .header {
-    background: #fff; /* Changed from #2196F3 to white */
-    color: #2196F3; /* Optional: keep text in Vauxsell blue for contrast */
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    .phone i {
-    color: #2196F3; /* Makes the phone icon Vauxsell blue (white wouldn't be visible on white background) */
-    }
-
-  .logo img {
-  height: 40px; /* Increased from 40px to 50px */
-  width: auto;
-}
-</style>
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header class="header">
     <div class="header-content">
       <div class="logo">
-          <img src="9.png" alt="Vauxsell Logo">
+        <img src="9.png" alt="Vauxsell Logo">
         <img src="logo1.png" alt="Binley Woods Logo">
         <span>Vauxsell Binley Woods Service Centre</span>
       </div>
@@ -987,7 +975,7 @@
       </div>
     </div>
   </header>
-
+  
   <!-- Important Update Banner -->
   <div class="update-banner">
     <p>
@@ -995,7 +983,7 @@
       Soon operating as <strong>Vauxsell Binley Woods – Head Branch, one of Coventry's largest independent workshops. We'll keep you informed throughout the transition.</strong>
     </p>
   </div>
-
+  
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-container">
@@ -1074,7 +1062,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Why Choose Section -->
   <section class="why-section">
     <div class="why-container">
@@ -1134,7 +1122,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Stats Section -->
   <section class="stats-section">
     <div class="stats-grid">
@@ -1156,7 +1144,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Form Section -->
   <section class="form-section" id="booking-form">
     <div class="form-container">
@@ -1245,7 +1233,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Map Section -->
   <section class="map-section">
     <div class="map-container">
@@ -1308,7 +1296,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Trust Section -->
   <section class="trust-section">
     <h3 style="font-size: 24px; margin-bottom: 20px;">Trusted by Leading Brands</h3>
@@ -1319,7 +1307,7 @@
       <img src="7.png" alt="Servicesure">
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
@@ -1329,11 +1317,12 @@
         <div class="contact-item">
           <i class="fas fa-map-marker-alt"></i>
           <span>5 Bodmin Road, Coventry, CV2 5DB</span>
-        </div><div class="contact-item" style="color: white;">
-  <i class="fas fa-phone" style="color: white;"></i>
-  <span>02476542202</span>
-</div>
-<div class="contact-item">
+        </div>
+        <div class="contact-item" style="color: white;">
+          <i class="fas fa-phone" style="color: white;"></i>
+          <span>02476542202</span>
+        </div>
+        <div class="contact-item">
           <i class="fas fa-clock"></i>
           <span>Mon-Fri: 8AM-6PM, Sat: 8AM-4PM</span>
         </div>
@@ -1343,7 +1332,7 @@
       </p>
     </div>
   </footer>
-
+  
   <!-- WhatsApp Float -->
   <a href="https://wa.me/442476615666" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
@@ -1355,7 +1344,7 @@
     <p style="font-weight: 600; margin-bottom: 5px;">⚡ Someone just claimed their £10 MOT!</p>
     <p style="font-size: 14px; color: #666;">Join 127 customers this week</p>
   </div>
-
+  
   <script>
     // Form submission
     document.getElementById('discountForm').addEventListener('submit', async function(e) {
