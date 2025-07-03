@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="£10 off MOT (now £35) Test + £20 off Aircon Re-gas + FREE 30 Point Vehicle Health Check + Blue Light Card 10% Discount at Vauxsell Binley Woods Service Centre - Coventry's Largest Multi-Branch Garage. 4 Local Branches. Limited time offer!">
   
-  <title>£10 off MOT (now £35) | £20 off Aircon | Blue Light Card 10% Discount - Vauxsell Binley Woods Multi-Branch Service Centre</title>
+  <title>£10 off MOT (now £35) | £20 off Aircon Re-gas | Blue Light Card 10% Discount - Vauxsell Binley Woods Multi-Branch Service Centre</title>
   <link rel="icon" href="logonew.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -1567,13 +1567,9 @@
           <button onclick="copyCode()" style="background: #2196F3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">
             <i class="fas fa-copy"></i> Copy Code
           </button>
-          <p style="margin-top: 15px; color: #666;">
-            ✓ £10 off MOT (now £35) Test<br>
-            ✓ £20 off Aircon Re-gas<br>
-            ✓ FREE 30 Point Health Check<br>
-            ✓ Blue Light Card: 10% off ALL services<br>
-            <strong>Valid for 30 days</strong>
-          </p>
+          <div id="discountDetails" style="margin-top: 15px; color: #666;">
+            <!-- This will be populated dynamically -->
+          </div>
         </div>
         <p style="font-size: 18px; margin-top: 20px;">
           📧 We'll email you the full details shortly!
@@ -1780,6 +1776,25 @@
       
       // Immediately show success after a brief delay (just for effect)
       setTimeout(() => {
+        // Check if Blue Light Card holder is checked
+        const isBlueLight = document.getElementById('blueLightHolder').checked;
+        
+        // Create the discount details HTML
+        let discountDetailsHTML = '';
+        discountDetailsHTML += '✓ £10 off MOT (now £35) Test<br>';
+        discountDetailsHTML += '✓ £20 off Aircon Re-gas<br>';
+        discountDetailsHTML += '✓ FREE 30 Point Health Check<br>';
+        
+        // Only add Blue Light if checkbox is checked
+        if (isBlueLight) {
+          discountDetailsHTML += '✓ Blue Light Card: 10% off ALL services<br>';
+        }
+        
+        discountDetailsHTML += '<strong>Valid for 30 days</strong>';
+        
+        // Update the discount details
+        document.getElementById('discountDetails').innerHTML = discountDetailsHTML;
+        
         // Show success with code
         form.style.display = 'none';
         successSection.style.display = 'block';
@@ -1808,7 +1823,7 @@
           timestamp: new Date().toISOString(),
           source: 'Vauxsell Binley Woods Funnel Page',
           discountCode: 'BWSAVE10',
-          discountAmount: '£10-£20 + Blue Light 10%',
+          discountAmount: isBlueLight ? '£10-£20 + Blue Light 10%' : '£10-£20',
           websiteUrl: window.location.href
         };
         
@@ -1905,13 +1920,6 @@
         alert('Discount code copied! Use it when booking.');
       });
     }
-
-<script>
-if (location.pathname.endsWith('.html')) {
-  location.replace(location.pathname.replace(/\.html$/, '') + location.search + location.hash);
-}
-</script>
-
   </script>
 </body>
 </html>
