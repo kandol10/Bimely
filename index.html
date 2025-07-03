@@ -1905,6 +1905,13 @@
         alert('Discount code copied! Use it when booking.');
       });
     }
+
+<script>
+if (location.pathname.endsWith('.html')) {
+  location.replace(location.pathname.replace(/\.html$/, '') + location.search + location.hash);
+}
+</script>
+
   </script>
 </body>
 </html>
