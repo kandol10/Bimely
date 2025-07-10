@@ -81,15 +81,15 @@
       color: #2196F3;
     }
     
-    /* Blue Light Card Banner */
+    /* Blue Light Card Banner - Updated */
     .blue-light-banner {
       background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
       color: white;
-      padding: 12px 20px;
+      padding: 15px 20px;
       text-align: center;
       margin-top: 80px;
-      font-size: 16px;
-      font-weight: 600;
+      font-size: 18px;
+      font-weight: 700;
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
       animation: slideDown 0.5s ease;
     }
@@ -122,6 +122,27 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
+    }
+    
+    .free-wash-badge {
+      background: #4CAF50;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-left: 10px;
+      position: relative;
+    }
+    
+    .free-wash-exclusion {
+      font-size: 10px;
+      font-weight: 400;
+      display: block;
+      margin-top: 2px;
     }
     
     /* Important Update Banner */
@@ -316,6 +337,13 @@
       margin-top: 5px;
     }
     
+    .offer-save-exclusion {
+      font-size: 10px;
+      color: #666;
+      margin-top: 3px;
+      font-style: italic;
+    }
+    
     .cta-section {
       background: rgba(76, 175, 80, 0.1);
       padding: 30px;
@@ -377,6 +405,119 @@
     .benefit i {
       color: #4CAF50;
       font-size: 20px;
+    }
+    
+    /* Calendar Styles */
+    .calendar-section {
+      margin-top: 30px;
+      padding: 30px;
+      background: #f8f8f8;
+      border-radius: 15px;
+    }
+    
+    .calendar-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .calendar-header h3 {
+      font-size: 24px;
+      color: #2196F3;
+      margin-bottom: 10px;
+    }
+    
+    .date-time-selector {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .date-input-group, .time-input-group {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .date-input-group label, .time-input-group label {
+      display: block;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .date-input-group input[type="date"], .time-slots {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    
+    .time-slots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    
+    .time-slot {
+      padding: 10px;
+      text-align: center;
+      background: #f0f0f0;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    
+    .time-slot:hover {
+      background: #e0e0e0;
+    }
+    
+    .time-slot.selected {
+      background: #2196F3;
+      color: white;
+      border-color: #1976D2;
+    }
+    
+    .time-slot.unavailable {
+      background: #e0e0e0;
+      color: #999;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+    
+    .confirm-booking-btn {
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .confirm-booking-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3);
+    }
+    
+    .confirm-booking-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
     }
     
     /* Why Choose Section */
@@ -755,6 +896,14 @@
       .branches-grid {
         grid-template-columns: 1fr;
       }
+      
+      .date-time-selector {
+        grid-template-columns: 1fr;
+      }
+      
+      .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
     
     .branch-card {
@@ -999,6 +1148,12 @@
       .blue-light-badge {
         font-size: 12px;
         padding: 3px 8px;
+      }
+      
+      .free-wash-badge {
+        font-size: 12px;
+        padding: 3px 8px;
+        margin-left: 5px;
       }
       
       .update-banner {
@@ -1295,12 +1450,17 @@
     </div>
   </header>
   
-  <!-- Blue Light Card Banner -->
+  <!-- Blue Light Card Banner - Updated -->
   <div class="blue-light-banner">
     <p>
       <i class="fas fa-id-card"></i>
-      <span class="blue-light-badge">NEW: BLUE LIGHT CARD HOLDERS</span>
-      <strong>Get 10% OFF ALL Services</strong> - NHS, Emergency Services, Armed Forces & Social Care Workers Welcome!
+      <span class="blue-light-badge">BLUE LIGHT CARD HOLDERS</span>
+      <strong>Get 10% OFF ALL Services + FREE Car Wash*</strong>
+      <span class="free-wash-badge">
+        <i class="fas fa-sparkles"></i> FREE CAR WASH
+        <span class="free-wash-exclusion">*excludes MOT & Aircon-only bookings</span>
+      </span>
+      - NHS, Emergency Services, Armed Forces & Social Care Workers!
     </p>
   </div>
   
@@ -1320,7 +1480,7 @@
           <div class="offer-badge" style="margin-bottom: 0;">⏰ OFFER ENDS SOON</div>
           <div class="blue-light-hero-badge" style="margin-bottom: 0;">
             <i class="fas fa-shield-alt"></i>
-            BLUE LIGHT CARD: 10% OFF
+            10% OFF + FREE CAR WASH*
           </div>
         </div>
         <h1>Get Your Car Serviced<br>From Just £89</h1>
@@ -1352,9 +1512,10 @@
             <div class="offer-save">Worth £39.99</div>
           </div>
           <div class="offer-card blue-light-card">
-            <div class="offer-price blue-light">10%</div>
-            <div class="offer-title">Blue Light Card Discount</div>
+            <div class="offer-price blue-light">10% + 🚗</div>
+            <div class="offer-title">Blue Light Discount + FREE Wash*</div>
             <div class="offer-save">On ALL Services!</div>
+            <div class="offer-save-exclusion">*excludes MOT & Aircon-only</div>
           </div>
         </div>
         
@@ -1381,10 +1542,10 @@
       <div class="cta-arrow">
         <i class="fas fa-arrow-down"></i>
       </div>
-      <p class="cta-text">Sign Up Below to Unlock Your Discount Code</p>
+      <p class="cta-text">Sign Up Below to Unlock Your Discount Code & Book Your Appointment</p>
       <a href="#booking-form" class="cta-button">
         <i class="fas fa-lock-open"></i>
-        GET MY DISCOUNT CODE
+        GET MY DISCOUNT CODE & BOOK
       </a>
     </div>
     
@@ -1403,10 +1564,12 @@
       </div>
       <div class="benefit">
         <i class="fas fa-check-circle"></i>
-        <span>Blue Light Card 10% Off</span>
+        <span>Blue Light: 10% Off + Free Wash*</span>
       </div>
     </div>
   </section>
+  
+
   
   <!-- Why Choose Section -->
   <section class="why-section">
@@ -1421,8 +1584,8 @@
           <div class="feature-icon blue-light-icon">
             <i class="fas fa-id-card"></i>
           </div>
-          <h3>Blue Light Card Discount</h3>
-          <p>Proud to support our NHS heroes, emergency services, armed forces, and social care workers with 10% off all services. Simply show your Blue Light Card when booking!</p>
+          <h3>Blue Light Card Benefits</h3>
+          <p>Proud to support our NHS heroes, emergency services, armed forces, and social care workers with 10% off all services PLUS a FREE car wash*. Simply show your Blue Light Card when booking! <em>*Free wash excludes MOT & Aircon-only bookings</em></p>
         </div>
         
         <div class="feature-card">
@@ -1498,7 +1661,7 @@
         <p>Get instant access to all exclusive offers including Blue Light Card discount</p>
         <div class="signup-notice">
           <i class="fas fa-lock"></i>
-          <span>You must complete the form below to unlock your discount code!</span>
+          <span>Complete the form below to unlock your discount code & book!</span>
         </div>
       </div>
       
@@ -1532,10 +1695,9 @@
           <label for="serviceRequired">Service Required *</label>
           <select id="serviceRequired" name="serviceRequired" required>
             <option value="">Select service</option>
-            <option value="mot">£10 MOT Test</option>
-            <option value="aircon">£20 Aircon Re-gas</option>
+            <option value="mot">£10 off MOT Test</option>
+            <option value="aircon">£20 off Aircon Re-gas</option>
             <option value="both">Both MOT & Aircon</option>
-            <option value="bluelight">Blue Light Card Service</option>
             <option value="other">Other Service</option>
           </select>
         </div>
@@ -1547,7 +1709,7 @@
         
         <div class="checkbox-group">
           <input type="checkbox" id="blueLightHolder" name="blueLightHolder">
-          <label for="blueLightHolder">I'm a Blue Light Card holder</label>
+          <label for="blueLightHolder">I'm a Blue Light Card holder (10% off + FREE car wash*)</label>
         </div>
         
         <button type="submit" class="submit-btn" id="submitBtn">
@@ -1564,20 +1726,61 @@
         <div class="discount-code">
           <p>Use this code when booking:</p>
           <div class="code-display" id="discountCode">BWSAVE10</div>
-          <button onclick="copyCode()" style="background: #2196F3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">
-            <i class="fas fa-copy"></i> Copy Code
-          </button>
           <div id="discountDetails" style="margin-top: 15px; color: #666;">
             <!-- This will be populated dynamically -->
           </div>
         </div>
-        <p style="font-size: 18px; margin-top: 20px;">
-          📧 We'll email you the full details shortly!
-        </p>
-        <a href="tel:02476542202" class="submit-btn" style="margin-top: 20px;">
-          <i class="fas fa-phone"></i>
-          Call Now to Book: 02476542202
-        </a>
+        
+        <!-- Calendar Section -->
+        <div class="calendar-section">
+          <div class="calendar-header">
+            <h3>Book Your Appointment</h3>
+            <p>Enter your discount code and select your preferred time</p>
+          </div>
+          
+          <div class="form-group" style="margin-bottom: 20px;">
+            <label for="bookingCode">Enter Your Discount Code</label>
+            <input type="text" id="bookingCode" name="bookingCode" placeholder="Enter code here" style="text-transform: uppercase;" required>
+          </div>
+          
+          <div class="date-time-selector">
+            <div class="date-input-group">
+              <label for="appointmentDate">Select Date</label>
+              <input type="date" id="appointmentDate" name="appointmentDate" min="" required>
+            </div>
+            
+            <div class="time-input-group">
+              <label>Select Time</label>
+              <div class="time-slots" id="timeSlots">
+                <!-- Time slots will be generated by JavaScript -->
+              </div>
+            </div>
+          </div>
+          
+          <button class="confirm-booking-btn" id="confirmBookingBtn" disabled>
+            <i class="fas fa-calendar-check"></i>
+            <span>Confirm Booking</span>
+          </button>
+        </div>
+        
+        <div id="bookingConfirmed" style="display: none; margin-top: 20px; padding: 30px; background: #E8F5E9; border-radius: 15px; text-align: center;">
+          <h3 style="color: #4CAF50; font-size: 32px; margin-bottom: 20px;">✅ BOOKING CONFIRMED</h3>
+          <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 20px;">
+            <p style="font-size: 20px; color: #333; margin-bottom: 10px;"><strong>Your Appointment Details:</strong></p>
+            <p id="confirmationDate" style="font-size: 18px; color: #666; margin: 5px 0;"></p>
+            <p id="confirmationTime" style="font-size: 18px; color: #666; margin: 5px 0;"></p>
+          </div>
+          <p style="font-size: 18px; color: #FF5722; font-weight: 600; margin-bottom: 20px;">
+            <i class="fas fa-camera"></i> Please take a screenshot and save this confirmation
+          </p>
+          <p style="font-size: 16px; color: #666; margin-bottom: 20px;">
+            For more information or to make changes to your booking:
+          </p>
+          <a href="tel:02476542202" class="submit-btn" style="margin-top: 10px;">
+            <i class="fas fa-phone"></i>
+            Call Us: 02476542202
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -1586,8 +1789,13 @@
   <section class="map-section">
     <div class="map-container">
       <div class="section-header">
-        <h2>Find Our Main Branch in Coventry</h2>
+        <h2>Find Our HQ Branch in Coventry</h2>
         <p>Just 5 minutes from University Hospital Coventry - See all 4 branches below</p>
+      </div>
+      
+      <!-- Map Image -->
+      <div style="text-align: center; margin-bottom: 40px;">
+        <img src="map.jpg" alt="Directions to Vauxsell Binley Woods" style="width: 100%; max-width: 600px; height: auto; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
       </div>
       
       <div class="map-grid">
@@ -1666,12 +1874,12 @@
       
       <div class="branches-grid">
         <div class="branch-card main-branch">
-          <div class="main-branch-badge">Main Branch</div>
+          <div class="main-branch-badge">HQ Branch</div>
           <div class="branch-icon">
             <i class="fas fa-star"></i>
           </div>
           <h3>Binley Woods Service Centre</h3>
-          <p class="branch-subtitle">(Head Office - Coventry)</p>
+          <p class="branch-subtitle">(Coventry)</p>
           <div class="branch-info">
             <p><i class="fas fa-location-dot"></i> 5 Bodmin Road, Coventry, CV2 5DB</p>
             <p><i class="fas fa-phone"></i> <a href="tel:02476542202">024 7654 2202</a></p>
@@ -1683,10 +1891,10 @@
             <i class="fas fa-map-marker-alt"></i>
           </div>
           <h3>Binley Woods Service Centre</h3>
-          <p class="branch-subtitle">(Coventry)</p>
+          <p class="branch-subtitle">(Foleshill)</p>
           <div class="branch-info">
-            <p><i class="fas fa-location-dot"></i> 60-62 Rugby Road, Coventry, CV3 2AX</p>
-            <p><i class="fas fa-phone"></i> <a href="tel:02476542202">024 7654 2202</a></p>
+            <p><i class="fas fa-location-dot"></i>1a Broad Street, CV6 5BE</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:02477990062">02477 990062</a></p>
           </div>
         </div>
         
@@ -1694,11 +1902,11 @@
           <div class="branch-icon">
             <i class="fas fa-map-marker-alt"></i>
           </div>
-          <h3>Binley Woods Service Centre</h3>
+          <h3>Rugby Branch</h3>
           <p class="branch-subtitle">(Rugby)</p>
           <div class="branch-info">
-            <p><i class="fas fa-location-dot"></i> Unit 2, Prospect Park, Valley Drive, Rugby, CV21 1TF</p>
-            <p><i class="fas fa-phone"></i> <a href="tel:01788877447">017 8887 7447</a></p>
+            <p><i class="fas fa-location-dot"></i>Unit 2, Prospect Park, CV21 1TF</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:02476542202">024 7654 2202</a></p>
           </div>
         </div>
         
@@ -1713,10 +1921,10 @@
             <p><i class="fas fa-phone"></i> <a href="tel:02476880910">024 7688 0910</a></p>
           </div>
         </div>
-      </div>
-      
+         
       <div class="branches-cta" style="background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);">
-        <p>🎖️ All branches offer FREE collection & delivery AND accept Blue Light Card for 10% discount!</p>
+        <p>🎖️ All branches offer FREE collection & delivery AND accept Blue Light Card for 10% discount + FREE car wash!</p>
+        <span class="free-wash-exclusion">*excludes MOT & Aircon-only bookings</span>
       </div>
     </div>
   </section>
@@ -1724,7 +1932,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
-      <h3 style="margin-bottom: 20px;">Vauxsell Binley Woods Service Centre - 4 Branches</h3>
+      <h3 style="margin-bottom: 20px;">Vauxsell Binley Woods Service Centre - 3 Branches</h3>
       <p style="margin-bottom: 20px; font-size: 18px; color: #4CAF50;">Vauxhall Car & Van Repair Specialist | Blue Light Card Partner</p>
       <div class="contact-info">
         <div class="contact-item">
@@ -1759,6 +1967,160 @@
   </div>
   
   <script>
+    // Set minimum date to tomorrow
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    document.getElementById('appointmentDate').min = tomorrow.toISOString().split('T')[0];
+    
+    // Generate time slots
+    function generateTimeSlots() {
+      const timeSlotsContainer = document.getElementById('timeSlots');
+      const times = [
+        '08:00', '08:30', '09:00', '09:30', '10:00', '10:30',
+        '11:00', '11:30', '12:00', '12:30', '13:00', '13:30',
+        '14:00', '14:30', '15:00', '15:30', '16:00', '16:30',
+        '17:00', '17:30'
+      ];
+      
+      times.forEach(time => {
+        const slot = document.createElement('div');
+        slot.className = 'time-slot';
+        slot.textContent = time;
+        slot.onclick = function() {
+          // Remove selected class from all slots
+          document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+          // Add selected class to clicked slot
+          this.classList.add('selected');
+          // Check if all fields are filled
+          checkBookingFields();
+        };
+        timeSlotsContainer.appendChild(slot);
+      });
+    }
+    
+    // Initialize time slots
+    generateTimeSlots();
+    
+    // Update time slots based on date selection
+    document.getElementById('appointmentDate').addEventListener('change', function() {
+      const selectedDate = new Date(this.value);
+      const dayOfWeek = selectedDate.getDay();
+      
+      // Disable some slots for Saturday (index 6)
+      const slots = document.querySelectorAll('.time-slot');
+      slots.forEach(slot => {
+        const time = slot.textContent;
+        if (dayOfWeek === 6 && (time >= '16:00')) {
+          slot.classList.add('unavailable');
+          slot.onclick = null;
+        } else {
+          slot.classList.remove('unavailable');
+          slot.onclick = function() {
+            document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+            this.classList.add('selected');
+            checkBookingFields();
+          };
+        }
+      });
+    });
+    
+    // Confirm booking button
+    document.getElementById('confirmBookingBtn').addEventListener('click', async function() {
+      const selectedDate = document.getElementById('appointmentDate').value;
+      const selectedTimeSlot = document.querySelector('.time-slot.selected');
+      const enteredCode = document.getElementById('bookingCode').value;
+      
+      if (!selectedDate || !selectedTimeSlot || !enteredCode) {
+        alert('Please enter your discount code and select both date and time');
+        return;
+      }
+      
+      // Verify the code matches
+      if (enteredCode.toUpperCase() !== 'BWSAVE10') {
+        alert('Invalid discount code. Please enter the correct code.');
+        return;
+      }
+      
+      const selectedTime = selectedTimeSlot.textContent;
+      
+      // Disable button and show loading
+      this.disabled = true;
+      this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Confirming Booking...</span>';
+      
+      // Get form data that was previously submitted
+      const formData = {
+        fullName: document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        postcode: document.getElementById('postcode').value,
+        vehicleReg: document.getElementById('vehicleReg').value,
+        serviceRequired: document.getElementById('serviceRequired').value,
+        freeCollection: document.getElementById('freeCollection').checked,
+        blueLightHolder: document.getElementById('blueLightHolder').checked,
+        appointmentDate: selectedDate,
+        appointmentTime: selectedTime,
+        discountCodeUsed: enteredCode,
+        timestamp: new Date().toISOString(),
+        source: 'Vauxsell Binley Woods Funnel Page',
+        discountCode: 'BWSAVE10',
+        discountAmount: document.getElementById('blueLightHolder').checked ? '£10-£20 + Blue Light 10% + Free Wash' : '£10-£20',
+        websiteUrl: window.location.href
+      };
+      
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwN9rBPjcba1regBlEqoOcqgD3i3Acx8XsZf5ZeJFcickksZ2GNcwHEWx9RSTO5MZCTUQ/exec';
+      
+      // Send to Google Sheets
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'text/plain',
+          },
+          body: JSON.stringify(formData)
+        });
+      } catch (err) {
+        console.log('Background save:', err);
+      }
+      
+      // Show success
+      setTimeout(() => {
+        // Hide everything else
+        document.querySelector('.discount-code').style.display = 'none';
+        document.querySelector('.calendar-section').style.display = 'none';
+        
+        // Format and display the appointment details
+        const formattedDate = new Date(selectedDate).toLocaleDateString('en-GB', { 
+          weekday: 'long', 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric' 
+        });
+        
+        document.getElementById('confirmationDate').innerHTML = `<i class="fas fa-calendar"></i> Date: <strong>${formattedDate}</strong>`;
+        document.getElementById('confirmationTime').innerHTML = `<i class="fas fa-clock"></i> Time: <strong>${selectedTime}</strong>`;
+        
+        // Show booking confirmed
+        document.getElementById('bookingConfirmed').style.display = 'block';
+      }, 1500);
+    });
+    
+    // Enable confirm button when all fields are filled
+    function checkBookingFields() {
+      const code = document.getElementById('bookingCode').value;
+      const date = document.getElementById('appointmentDate').value;
+      const timeSlot = document.querySelector('.time-slot.selected');
+      
+      if (code && date && timeSlot) {
+        document.getElementById('confirmBookingBtn').disabled = false;
+      } else {
+        document.getElementById('confirmBookingBtn').disabled = true;
+      }
+    }
+    
+    // Add event listener to code input
+    document.getElementById('bookingCode').addEventListener('input', checkBookingFields);
+    
     // Form submission
     document.getElementById('discountForm').addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -1788,6 +2150,7 @@
         // Only add Blue Light if checkbox is checked
         if (isBlueLight) {
           discountDetailsHTML += '✓ Blue Light Card: 10% off ALL services<br>';
+          discountDetailsHTML += '✓ FREE Car Wash with service<br>';
         }
         
         discountDetailsHTML += '<strong>Valid for 30 days</strong>';
@@ -1803,41 +2166,6 @@
         btnText.style.display = 'block';
         spinner.style.display = 'none';
         submitBtn.disabled = false;
-        
-        // Send data to Google Sheets in background
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        
-        // Map form fields to match Google Sheets expectations
-        const sheetData = {
-          fullName: data.fullName || '',
-          email: data.email || '',
-          phone: data.phone || '',
-          postcode: data.postcode || '',
-          vehicleReg: data.vehicleReg || '',
-          vehicleMake: '', // Not in form, leave empty
-          serviceType: data.serviceRequired || '', // Map serviceRequired to serviceType
-          preferredDate: '', // Not in form, leave empty
-          collectionRequired: data.freeCollection === 'on', // Convert checkbox to boolean
-          blueLightHolder: data.blueLightHolder === 'on', // Add Blue Light Card status
-          timestamp: new Date().toISOString(),
-          source: 'Vauxsell Binley Woods Funnel Page',
-          discountCode: 'BWSAVE10',
-          discountAmount: isBlueLight ? '£10-£20 + Blue Light 10%' : '£10-£20',
-          websiteUrl: window.location.href
-        };
-        
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPnlhG0G9l9HPV1FkBYIv3bxen_JBLgx6JtzvLEqEQeXLTCvDTtLldrDWPiMUs9Dv7Ag/exec';
-        
-        // Send in background - don't wait for response
-        fetch(SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: {
-            'Content-Type': 'text/plain',
-          },
-          body: JSON.stringify(sheetData)
-        }).catch(err => console.log('Background save:', err));
         
         // Track conversion if analytics present
         if (typeof gtag !== 'undefined') {
@@ -1904,22 +2232,8 @@
       }, 8000);
     }, 5000);
     
-    // Copy code function
-    function copyCode() {
-      const code = 'BWSAVE10';
-      navigator.clipboard.writeText(code).then(() => {
-        alert('Discount code copied! Use it when booking.');
-      }).catch(() => {
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = code;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        alert('Discount code copied! Use it when booking.');
-      });
-    }
+    // Copy code function - removed as no longer needed
   </script>
 </body>
 </html>
+
