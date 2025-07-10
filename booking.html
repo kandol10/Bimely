@@ -135,6 +135,14 @@
       align-items: center;
       gap: 5px;
       margin-left: 10px;
+      position: relative;
+    }
+    
+    .free-wash-exclusion {
+      font-size: 10px;
+      font-weight: 400;
+      display: block;
+      margin-top: 2px;
     }
     
     /* Important Update Banner */
@@ -327,6 +335,13 @@
       font-size: 14px;
       color: #FF5722;
       margin-top: 5px;
+    }
+    
+    .offer-save-exclusion {
+      font-size: 10px;
+      color: #666;
+      margin-top: 3px;
+      font-style: italic;
     }
     
     .cta-section {
@@ -873,7 +888,7 @@
     
     @media (min-width: 1400px) {
       .branches-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
     }
     
@@ -1440,8 +1455,11 @@
     <p>
       <i class="fas fa-id-card"></i>
       <span class="blue-light-badge">BLUE LIGHT CARD HOLDERS</span>
-      <strong>Get 10% OFF ALL Services + FREE Car Wash</strong>
-      <span class="free-wash-badge"><i class="fas fa-sparkles"></i> FREE CAR WASH</span>
+      <strong>Get 10% OFF ALL Services + FREE Car Wash*</strong>
+      <span class="free-wash-badge">
+        <i class="fas fa-sparkles"></i> FREE CAR WASH
+        <span class="free-wash-exclusion">*excludes MOT & Aircon-only bookings</span>
+      </span>
       - NHS, Emergency Services, Armed Forces & Social Care Workers!
     </p>
   </div>
@@ -1462,7 +1480,7 @@
           <div class="offer-badge" style="margin-bottom: 0;">⏰ OFFER ENDS SOON</div>
           <div class="blue-light-hero-badge" style="margin-bottom: 0;">
             <i class="fas fa-shield-alt"></i>
-            10% OFF + FREE CAR WASH
+            10% OFF + FREE CAR WASH*
           </div>
         </div>
         <h1>Get Your Car Serviced<br>From Just £89</h1>
@@ -1495,8 +1513,9 @@
           </div>
           <div class="offer-card blue-light-card">
             <div class="offer-price blue-light">10% + 🚗</div>
-            <div class="offer-title">Blue Light Discount + FREE Wash</div>
+            <div class="offer-title">Blue Light Discount + FREE Wash*</div>
             <div class="offer-save">On ALL Services!</div>
+            <div class="offer-save-exclusion">*excludes MOT & Aircon-only</div>
           </div>
         </div>
         
@@ -1545,7 +1564,7 @@
       </div>
       <div class="benefit">
         <i class="fas fa-check-circle"></i>
-        <span>Blue Light: 10% Off + Free Wash</span>
+        <span>Blue Light: 10% Off + Free Wash*</span>
       </div>
     </div>
   </section>
@@ -1566,15 +1585,15 @@
             <i class="fas fa-id-card"></i>
           </div>
           <h3>Blue Light Card Benefits</h3>
-          <p>Proud to support our NHS heroes, emergency services, armed forces, and social care workers with 10% off all services PLUS a FREE car wash. Simply show your Blue Light Card when booking!</p>
+          <p>Proud to support our NHS heroes, emergency services, armed forces, and social care workers with 10% off all services PLUS a FREE car wash*. Simply show your Blue Light Card when booking! <em>*Free wash excludes MOT & Aircon-only bookings</em></p>
         </div>
         
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-warehouse"></i>
           </div>
-          <h3>3 Local Branches</h3>
-          <p>With 3 strategic locations across Coventry and Rugby, we're always nearby. 15 service ramps at our main branch mean no waiting!</p>
+          <h3>4 Local Branches</h3>
+          <p>With 4 strategic locations across Coventry and Rugby, we're always nearby. 15 service ramps at our main branch mean no waiting!</p>
         </div>
         
         <div class="feature-card">
@@ -1616,7 +1635,7 @@
   <section class="stats-section">
     <div class="stats-grid">
       <div class="stat-item">
-        <h3>3</h3>
+        <h3>4</h3>
         <p>Local Branches</p>
       </div>
       <div class="stat-item">
@@ -1679,7 +1698,6 @@
             <option value="mot">£10 off MOT Test</option>
             <option value="aircon">£20 off Aircon Re-gas</option>
             <option value="both">Both MOT & Aircon</option>
-            <option value="bluelight">Blue Light Card Service</option>
             <option value="other">Other Service</option>
           </select>
         </div>
@@ -1691,7 +1709,7 @@
         
         <div class="checkbox-group">
           <input type="checkbox" id="blueLightHolder" name="blueLightHolder">
-          <label for="blueLightHolder">I'm a Blue Light Card holder (10% off + FREE car wash)</label>
+          <label for="blueLightHolder">I'm a Blue Light Card holder (10% off + FREE car wash*)</label>
         </div>
         
         <button type="submit" class="submit-btn" id="submitBtn">
@@ -1771,8 +1789,8 @@
   <section class="map-section">
     <div class="map-container">
       <div class="section-header">
-        <h2>Find Our Main Branch in Coventry</h2>
-        <p>Just 5 minutes from University Hospital Coventry - See all 3 branches below</p>
+        <h2>Find Our HQ Branch in Coventry</h2>
+        <p>Just 5 minutes from University Hospital Coventry - See all 4 branches below</p>
       </div>
       
       <!-- Map Image -->
@@ -1850,25 +1868,25 @@
   <section class="branches-section">
     <div class="branches-container">
       <div class="section-header">
-        <h2>Our 3 Local Branches</h2>
+        <h2>Our 4 Local Branches</h2>
         <p>Serving Coventry, Rugby, and surrounding areas with expert car care - All branches accept Blue Light Card</p>
       </div>
       
       <div class="branches-grid">
         <div class="branch-card main-branch">
-          <div class="main-branch-badge">Main Branch</div>
+          <div class="main-branch-badge">HQ Branch</div>
           <div class="branch-icon">
             <i class="fas fa-star"></i>
           </div>
           <h3>Binley Woods Service Centre</h3>
-          <p class="branch-subtitle">(Head Office - Coventry)</p>
+          <p class="branch-subtitle">(Coventry)</p>
           <div class="branch-info">
             <p><i class="fas fa-location-dot"></i> 5 Bodmin Road, Coventry, CV2 5DB</p>
             <p><i class="fas fa-phone"></i> <a href="tel:02476542202">024 7654 2202</a></p>
           </div>
         </div>
         
-     <div class="branch-card">
+        <div class="branch-card">
           <div class="branch-icon">
             <i class="fas fa-map-marker-alt"></i>
           </div>
@@ -1876,9 +1894,22 @@
           <p class="branch-subtitle">(Foleshill)</p>
           <div class="branch-info">
             <p><i class="fas fa-location-dot"></i>1a Broad Street, CV6 5BE</p>
-            <p><i class="fas fa-phone"></i> <a href="tel:01788877447">02477 990062</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:02477990062">02477 990062</a></p>
           </div>
         </div>
+        
+        <div class="branch-card">
+          <div class="branch-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Rugby Branch</h3>
+          <p class="branch-subtitle">(Rugby)</p>
+          <div class="branch-info">
+            <p><i class="fas fa-location-dot"></i>Unit 2, Prospect Park, CV21 1TF</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:02476542202">024 7654 2202</a></p>
+          </div>
+        </div>
+        
         <div class="branch-card">
           <div class="branch-icon">
             <i class="fas fa-cogs"></i>
@@ -1890,10 +1921,10 @@
             <p><i class="fas fa-phone"></i> <a href="tel:02476880910">024 7688 0910</a></p>
           </div>
         </div>
-      </div>
-      
+         
       <div class="branches-cta" style="background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);">
         <p>🎖️ All branches offer FREE collection & delivery AND accept Blue Light Card for 10% discount + FREE car wash!</p>
+        <span class="free-wash-exclusion">*excludes MOT & Aircon-only bookings</span>
       </div>
     </div>
   </section>
@@ -2036,7 +2067,7 @@
         websiteUrl: window.location.href
       };
       
-      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPnlhG0G9l9HPV1FkBYIv3bxen_JBLgx6JtzvLEqEQeXLTCvDTtLldrDWPiMUs9Dv7Ag/exec';
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwN9rBPjcba1regBlEqoOcqgD3i3Acx8XsZf5ZeJFcickksZ2GNcwHEWx9RSTO5MZCTUQ/exec';
       
       // Send to Google Sheets
       try {
@@ -2205,3 +2236,4 @@
   </script>
 </body>
 </html>
+
