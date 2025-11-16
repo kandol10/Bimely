@@ -1234,19 +1234,23 @@
     /* MOBILE RESPONSIVE FIXES */
     @media (max-width: 768px) {
       /* Black Friday mobile */
+      .black-friday-banner {
+        margin-top: 0;
+      }
+
       .black-friday-top-strip {
-        font-size: 11px;
-        padding: 6px 15px;
-        gap: 8px;
+        font-size: 10px;
+        padding: 5px 10px;
+        gap: 5px;
       }
 
       .black-friday-content {
-        padding: 25px 15px;
+        padding: 20px 10px;
       }
 
       .black-friday-text {
-        font-size: 40px;
-        letter-spacing: 4px;
+        font-size: 36px;
+        letter-spacing: 3px;
         text-shadow:
           2px 2px 0 #DC0000,
           4px 4px 0 #000,
@@ -1254,9 +1258,9 @@
       }
 
       .black-friday-subtitle {
-        font-size: 14px;
-        margin-top: 10px;
-        letter-spacing: 1px;
+        font-size: 11px;
+        margin-top: 8px;
+        letter-spacing: 0.5px;
       }
 
       /* Fix badges on mobile */
@@ -1277,82 +1281,106 @@
       .header {
         position: relative !important;
         width: 100%;
+        padding: 10px 0;
       }
-      
+
       .blue-light-banner {
         margin-top: 0 !important;
-        padding: 10px 15px;
-        font-size: 14px;
+        padding: 8px 10px;
+        font-size: 11px;
+        line-height: 1.4;
       }
-      
+
+      .blue-light-banner p {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .blue-light-banner strong {
+        font-size: 10px;
+      }
+
       .blue-light-badge {
-        font-size: 12px;
-        padding: 3px 8px;
+        font-size: 10px;
+        padding: 2px 6px;
       }
-      
+
       .free-wash-badge {
-        font-size: 12px;
-        padding: 3px 8px;
-        margin-left: 5px;
+        font-size: 9px;
+        padding: 2px 6px;
+        margin-left: 0;
+        margin-top: 3px;
       }
-      
+
+      .free-wash-exclusion {
+        font-size: 8px;
+      }
+
       .update-banner {
         position: relative;
-        padding: 10px 15px;
-        font-size: 13px;
+        padding: 8px 10px;
+        font-size: 11px;
+        line-height: 1.4;
       }
       
       body {
         padding-top: 0 !important;
       }
-      
+
       .header-content {
         flex-direction: column;
-        gap: 10px;
-        padding: 10px 15px;
+        gap: 8px;
+        padding: 8px 10px;
       }
-      
+
       .logo {
-        font-size: 16px;
+        font-size: 14px;
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        gap: 8px;
+        gap: 6px;
       }
-      
+
       .logo span {
         width: 100%;
-        font-size: 14px;
+        font-size: 12px;
       }
-      
+
       .logo img {
-        height: 35px;
+        height: 30px;
       }
-      
+
       .phone {
-        font-size: 16px;
+        font-size: 15px;
       }
       
       .hero {
-        padding: 40px 20px;
+        padding: 30px 15px;
       }
-      
+
       .hero-container {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 20px;
         text-align: center;
       }
-      
+
       .hero-content {
         text-align: center;
       }
-      
-      h1 {
-        font-size: 32px;
+
+      .hero-content p {
+        font-size: 14px !important;
+        margin-bottom: 10px !important;
       }
-      
+
+      h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
       .subtitle {
-        font-size: 18px;
+        font-size: 14px;
+        margin-bottom: 15px;
       }
       
       .offer-badge {
@@ -1531,17 +1559,17 @@
     @media (max-width: 480px) {
       /* Black Friday extra small mobile */
       .black-friday-top-strip {
-        font-size: 9px;
-        padding: 5px 10px;
-        gap: 5px;
+        font-size: 8px;
+        padding: 4px 8px;
+        gap: 4px;
       }
 
       .black-friday-content {
-        padding: 20px 10px;
+        padding: 15px 8px;
       }
 
       .black-friday-text {
-        font-size: 32px;
+        font-size: 28px;
         letter-spacing: 2px;
         text-shadow:
           2px 2px 0 #DC0000,
@@ -1550,17 +1578,31 @@
       }
 
       .black-friday-subtitle {
-        font-size: 12px;
-        margin-top: 8px;
+        font-size: 10px;
+        margin-top: 6px;
       }
 
       h1 {
-        font-size: 28px;
+        font-size: 24px;
+      }
+
+      .hero-content p {
+        font-size: 12px !important;
       }
 
       .update-banner {
-        font-size: 12px;
-        padding: 8px 10px;
+        font-size: 10px;
+        padding: 6px 8px;
+        line-height: 1.3;
+      }
+
+      .blue-light-banner {
+        font-size: 9px;
+        padding: 6px 8px;
+      }
+
+      .blue-light-banner strong {
+        font-size: 9px;
       }
       
       .offer-price {
@@ -1698,10 +1740,6 @@
         
         <p style="color: #DC0000; font-weight: 600; margin-bottom: 20px;">
           <i class="fas fa-users"></i> <span id="viewers">23</span> people viewing this offer now
-        </p>
-        
-        <p style="color: #333; font-size: 16px; margin-bottom: 30px;">
-          <i class="fas fa-clock"></i> Offer expires in: <span id="countdown" style="font-weight: 600; color: #DC0000;">23:47:52</span>
         </p>
       </div>
  
@@ -2210,24 +2248,6 @@
     
     // Update viewers every 3-7 seconds
     setInterval(updateViewers, 3000 + Math.random() * 4000);
-    
-    // Countdown timer (resets at midnight)
-    function updateCountdown() {
-      const now = new Date();
-      const midnight = new Date();
-      midnight.setHours(24, 0, 0, 0);
-      const diff = midnight - now;
-      
-      const hours = Math.floor(diff / 3600000);
-      const minutes = Math.floor((diff % 3600000) / 60000);
-      const seconds = Math.floor((diff % 60000) / 1000);
-      
-      const countdownEl = document.getElementById('countdown');
-      countdownEl.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-    }
-    
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
     
     // Show notification after 5 seconds
     setTimeout(() => {
