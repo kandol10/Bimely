@@ -1675,7 +1675,7 @@
           </div>
           <div class="offer-card">
             <div class="offer-title" style="margin-bottom: 10px;">Wheel Alignment</div>
-            <div class="offer-price">£25</div>
+            <div class="offer-price">£20</div>
             <div class="offer-save">was £49.99</div>
           </div>
           <div class="offer-card">
@@ -1711,7 +1711,7 @@
     <div class="benefits">
       <div class="benefit">
         <i class="fas fa-check-circle"></i>
-        <span>Free Collection & Delivery</span>
+        <span>Free Collection & Delivery (Mon-Fri, Full Service + MOT only)</span>
       </div>
       <div class="benefit">
         <i class="fas fa-check-circle"></i>
@@ -1768,7 +1768,7 @@
             <i class="fas fa-truck"></i>
           </div>
           <h3>Free Collection & Delivery</h3>
-          <p>We'll collect your car from home or work and deliver it back - completely FREE across all of Coventry and Warwickshire from any of our 4 branches.</p>
+          <p>We'll collect your car from home or work and deliver it back - completely FREE across all of Coventry and Warwickshire from any of our 4 branches. Available Monday-Friday only when you book a Full Service & MOT package.</p>
         </div>
         
         <div class="feature-card">
@@ -1854,11 +1854,17 @@
         <div class="form-group">
           <label for="appointmentDate">Preferred Appointment Date *</label>
           <input type="date" id="appointmentDate" name="appointmentDate" required>
+          <p style="font-size: 12px; color: #DC0000; margin-top: 5px; font-weight: 600;">
+            <i class="fas fa-info-circle"></i> Collection & delivery available Monday-Friday only
+          </p>
         </div>
 
         <div class="form-group">
           <label for="appointmentTime">Preferred Appointment Time *</label>
           <input type="time" id="appointmentTime" name="appointmentTime" required>
+          <p style="font-size: 12px; color: #666; margin-top: 5px;">
+            Operating hours: Mon-Fri 8:00 AM - 6:00 PM
+          </p>
         </div>
 
         <div class="checkbox-group">
@@ -1976,7 +1982,7 @@
             <i class="fas fa-truck"></i>
             <div>
               <strong style="font-size: 18px; color: #DC0000;">Free Collection & Delivery</strong>
-              <p style="color: #666; margin-top: 5px;">We'll collect and deliver your vehicle anywhere in Coventry - absolutely FREE!</p>
+              <p style="color: #666; margin-top: 5px;">We'll collect and deliver your vehicle anywhere in Coventry - absolutely FREE! Available Monday-Friday only when you book a Full Service & MOT package.</p>
             </div>
           </div>
         </div>
@@ -2054,8 +2060,8 @@
         </div>
          
       <div class="branches-cta">
-        <p>🎖️ All branches offer FREE collection & delivery AND accept Blue Light Card for 10% discount + FREE car wash!</p>
-        <span class="free-wash-exclusion" style="color: #ccc;">*excludes MOT & Aircon-only bookings</span>
+        <p>🎖️ All branches accept Blue Light Card for 10% discount + FREE car wash! FREE collection & delivery available Mon-Fri with Full Service & MOT bookings.</p>
+        <span class="free-wash-exclusion" style="color: #ccc;">*Free wash excludes MOT & Aircon-only bookings. Collection & delivery not available for standalone MOT or wheel alignment services.</span>
       </div>
     </div>
   </section>
@@ -2092,6 +2098,25 @@
   
   
   <script>
+    // Restrict date picker to Monday-Friday only
+    const appointmentDateInput = document.getElementById('appointmentDate');
+
+    // Set minimum date to today
+    const today = new Date();
+    appointmentDateInput.min = today.toISOString().split('T')[0];
+
+    // Add event listener to prevent weekend selection
+    appointmentDateInput.addEventListener('input', function(e) {
+      const selectedDate = new Date(this.value);
+      const dayOfWeek = selectedDate.getDay();
+
+      // Check if selected day is Saturday (6) or Sunday (0)
+      if (dayOfWeek === 0 || dayOfWeek === 6) {
+        alert('Collection & delivery is only available Monday-Friday. Please select a weekday.');
+        this.value = '';
+      }
+    });
+
     // Form submission
     document.getElementById('bookingForm').addEventListener('submit', async function(e) {
       e.preventDefault();
