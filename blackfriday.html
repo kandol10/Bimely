@@ -2189,29 +2189,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
       // Show success after brief delay
       setTimeout(() => {
-        // Build discount details
-        const isBlueLight = document.getElementById('blueLightHolder').checked;
-        let discountDetailsHTML = '';
-        discountDetailsHTML += '✓ £10 off MOT (now £35)<br>';
-        discountDetailsHTML += '✓ £20 off Aircon Re-gas<br>';
-        discountDetailsHTML += '✓ FREE 30 Point Health Check<br>';
-
-        if (isBlueLight) {
-          discountDetailsHTML += '✓ <strong>Blue Light Card: 10% off ALL services</strong><br>';
-          discountDetailsHTML += '✓ <strong>FREE Car Wash with service</strong><br>';
-        }
-
-        discountDetailsHTML += '<br><strong style="color: #DC0000;">Valid for 30 days</strong>';
-
-        document.getElementById('discountDetails').innerHTML = discountDetailsHTML;
-
-        // Hide form and show success
-        form.style.display = 'none';
-        successSection.style.display = 'block';
-
-        // Scroll to success
-        successSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
         // Track conversion with Google Analytics
         if (typeof gtag !== 'undefined') {
           gtag('event', 'generate_lead', {
@@ -2230,6 +2207,10 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             currency: 'GBP'
           });
         }
+
+        // Redirect to thank you page
+        const isBlueLight = document.getElementById('blueLightHolder').checked;
+        window.location.href = 'thankyou.html?bluelight=' + isBlueLight;
       }, 1000);
     });
 
