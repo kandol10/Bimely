@@ -2212,12 +2212,22 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         // Scroll to success
         successSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-        // Track conversion
+        // Track conversion with Google Analytics
         if (typeof gtag !== 'undefined') {
-          gtag('event', 'conversion', {
-            'send_to': 'YOUR_CONVERSION_ID',
+          gtag('event', 'generate_lead', {
+            'event_category': 'form',
+            'event_label': 'booking_form_submission',
             'value': 10.00,
             'currency': 'GBP'
+          });
+        }
+
+        // Track TikTok conversion
+        if (typeof ttq !== 'undefined') {
+          ttq.track('CompleteRegistration', {
+            content_name: 'Booking Form',
+            value: 10.00,
+            currency: 'GBP'
           });
         }
       }, 1000);
